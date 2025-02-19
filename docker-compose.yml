@@ -1,0 +1,9 @@
+services:
+  develop:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: memoolv/solid_principles:latest
+    command: bash
+    volumes:
+      - $PWD:/workdir
