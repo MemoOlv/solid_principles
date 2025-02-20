@@ -17,3 +17,6 @@ def test_report():
 
     report.save_to_file(output_file)
     assert file.exists()
+
+    if file.exists():
+        file.unlink()
