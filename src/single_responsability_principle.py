@@ -15,4 +15,4 @@ class ReportSaver:
         self.report: Report = report
     def save_to_file(self, filename):
         self.file = pathlib.Path(filename)
-        self.file.write_text(self.content)
+        self.file.write_text(self.report.content)
