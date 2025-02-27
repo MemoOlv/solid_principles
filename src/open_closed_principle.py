@@ -12,6 +12,5 @@ class Rectangle:
     def area(self) -> float:
         return self.width * self.height
 
-def calculate_area(shape) -> float:
-    if isinstance(shape, Rectangle):
-        return shape.width * shape.height
+def calculate_area(shape: Shape) -> float:
+    return shape.area()
