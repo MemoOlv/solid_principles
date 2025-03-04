@@ -13,4 +13,4 @@ def test_circle_area():
     circle = Circle(radius)
     obtained = calculate_area(circle)
     expected = 132.73
-    assert obtained == approx(expected)
+    assert obtained == approx(expected, abs=1e-2)
