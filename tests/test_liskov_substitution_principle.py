@@ -1,4 +1,4 @@
-from src.liskov_subsitution_principle import Bird, make_bird_fly
+from src.liskov_substitution_principle import Bird, make_bird_fly
 
 def test_flying_penguin():
     bird = Bird()
