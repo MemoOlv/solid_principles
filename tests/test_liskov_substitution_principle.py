@@ -1,4 +1,4 @@
-from src.liskov_substitution_principle import Bird, make_bird_fly, Penguin, make_bird_move, FlyingBird
+from src.liskov_substitution_principle import Bird, make_bird_fly, Penguin, make_bird_move, FlyingBird, FlightlessBird
 
 def test_flying_penguin():
     bird = Bird()
@@ -19,4 +19,9 @@ def test_flying_penguin():
     penguin = Penguin()
     obtained = make_bird_fly(penguin)
     expected = "I can't fly"
+    assert obtained == expected
+
+    penguin = FlightlessBird()
+    obtained = make_bird_move(eagle)
+    expected = "I am walking"
     assert obtained == expected
