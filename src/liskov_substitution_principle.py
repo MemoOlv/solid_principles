@@ -8,6 +8,10 @@ class FlyingBird(Bird):
     def move(self):
         return "I am flying"
 
+class FlightlessBird(Bird):
+    def move(self):
+        return "I am walking"
+
 class Penguin(Bird):
     def fly(self):
         return "I can't fly"
