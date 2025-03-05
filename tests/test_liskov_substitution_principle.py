@@ -22,6 +22,6 @@ def test_flying_penguin():
     assert obtained == expected
 
     penguin = FlightlessBird()
-    obtained = make_bird_move(eagle)
+    obtained = make_bird_move(penguin)
     expected = "I am walking"
     assert obtained == expected
