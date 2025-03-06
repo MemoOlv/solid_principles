@@ -15,3 +15,6 @@ class AllInOnePrinter:
 class Printer(PrinterProtocol):
     def print_document(self):
         return "Printing"
+
+def do_the_print(printer: Printer):
+    return printer.print_document()
