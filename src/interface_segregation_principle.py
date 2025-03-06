@@ -5,8 +5,11 @@ class PrinterProtocol(Protocol):
         pass
 
 class AllInOnePrinter:
+    def __init__(self):
+        self.printer = Printer()
+
     def print_document(self):
-        return "Printing"
+        return do_the_print(self.printer)
     def scan_document(self):
         return "Scanning"
     def fax_document(self):
