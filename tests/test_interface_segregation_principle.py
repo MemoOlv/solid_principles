@@ -1,4 +1,4 @@
-from src.interface_segregation_principle import AllInOnePrinter, Printer
+from src.interface_segregation_principle import AllInOnePrinter, Printer, do_the_print
 
 def test_do_everything():
     all_printer = AllInOnePrinter()
@@ -16,6 +16,6 @@ def test_do_everything():
 
 def test_just_print():
     printer = Printer()
-    obtained_print = printer.print_document()
+    obtained_print = do_the_print(printer)
     expected_print = "Printing"
     assert obtained_print == expected_print
