@@ -1,3 +1,9 @@
+from typing import Protocol
+
+class PrinterProtocol(Protocol):
+    def print_document(self):
+        pass
+
 class AllInOnePrinter:
     def print_document(self):
         return "Printing"
@@ -6,6 +12,6 @@ class AllInOnePrinter:
     def fax_document(self):
         return "Faxing"
 
-class Printer(AllInOnePrinter):
+class Printer(PrinterProtocol):
     def print_document(self):
-        return super().print_document()
+        return "Printing"
