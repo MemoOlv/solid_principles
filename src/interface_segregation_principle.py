@@ -5,3 +5,7 @@ class AllInOnePrinter:
         return "Scanning"
     def fax_document(self):
         return "Faxing"
+
+class Printer(AllInOnePrinter):
+    def print_document(self):
+        return super().print_document()
