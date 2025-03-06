@@ -11,7 +11,7 @@ class ScannerProtocol(Protocol):
 class AllInOnePrinter:
     def __init__(self):
         self.printer = Printer()
-        self.scanner = Scanner()
+        self.scanner = Scaner()
 
     def print_document(self):
         return do_the_print(self.printer)
@@ -24,12 +24,12 @@ class Printer(PrinterProtocol):
     def print_document(self):
         return "Printing"
 
-class Scanner(PrinterProtocol):
+class Scaner(PrinterProtocol):
     def scan_document(self):
         return "Scanning"
 
 def do_the_print(printer: Printer):
     return printer.print_document()
 
-def do_the_scan(scanner: Scanner):
+def do_the_scan(scanner: Scaner):
     return scanner.scan_document()
