@@ -1,4 +1,13 @@
-from src.interface_segregation_principle import AllInOnePrinter, Printer, do_the_print, Scaner, do_the_scan
+from src.interface_segregation_principle import (
+    AllInOnePrinter,
+    Printer,
+    do_the_print,
+    Scaner,
+    do_the_scan,
+    Faxer,
+    do_the_fax,
+)
+
 
 def test_do_everything():
     all_printer = AllInOnePrinter()
@@ -14,11 +23,13 @@ def test_do_everything():
     expected_fax = "Faxing"
     assert obtained_fax == expected_fax
 
+
 def test_just_print():
     printer = Printer()
     obtained_print = do_the_print(printer)
     expected_print = "Printing"
     assert obtained_print == expected_print
+
 
 def test_just_scan():
     scanner = Scaner()
@@ -26,3 +37,9 @@ def test_just_scan():
     expected_scanner = "Scanning"
     assert obtained_scanner == expected_scanner
 
+
+def test_just_fac():
+    faxer = Faxer()
+    obtained_faxer = do_the_fax(faxer)
+    expected_faxer = "Faxing"
+    assert obtained_faxer == expected_faxer
