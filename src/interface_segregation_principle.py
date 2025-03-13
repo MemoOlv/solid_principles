@@ -19,15 +19,16 @@ class AllInOnePrinter:
     def __init__(self):
         self.printer = Printer()
         self.scanner = Scaner()
+        self.faxer = Faxer()
 
     def print_document(self):
         return do_the_print(self.printer)
 
     def scan_document(self):
-        return "Scanning"
+        return do_the_scan(self.scanner)
 
     def fax_document(self):
-        return "Faxing"
+        return do_the_fax(self.faxer)
 
 
 class Printer(PrinterProtocol):
