@@ -5,6 +5,7 @@ from src.single_responsability_principle import Report, ReportSaver
 report_content = "This is the content of the report"
 report = Report(report_content)
 
+
 def test_report():
     obtained_report_generation = report.generate()
     expected_report_generation = "Report content: This is the content of the report"
